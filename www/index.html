@@ -16,6 +16,14 @@ function showHint(str) {
         xmlhttp.send();
     }
 }
+
+window.addEventListener("batterystatus", onBatteryStatus, false);
+
+function onBatteryStatus(info) {
+    // Handle the online event
+    //console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+	document.getElementById("battery").innerHTML = "Level: " + info.level + " isPlugged: " + info.isPlugged;
+}
 </script>
 </head>
 <body>
@@ -25,5 +33,6 @@ function showHint(str) {
 First name: <input type="text" onkeyup="showHint(this.value)">
 </form>
 <p>Suggestions: <span id="txtHint"></span></p>
+<div id="battery"></div>
 </body>
 </html>

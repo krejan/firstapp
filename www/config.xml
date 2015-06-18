@@ -4,12 +4,14 @@
 	<name>firstapp</name>
 
 	<description>
-		A sample Apache Cordova application that responds to the deviceready
+		A sample Apache Cordova application that responds to the
+		deviceready
 		event.
 	</description>
 
 	<author href="http://www.eclipse.org/thym" email="thym-dev@eclipse.org">
-		Eclipse.org - Thym
+		Eclipse.org -
+		Thym
 	</author>
 
 	<content src="index.html" />
@@ -20,6 +22,18 @@
 
 	<feature name="App">
 		<param name="android-package" value="org.apache.cordova.App" />
+	</feature>
+	<feature name="Battery">
+		<param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
+		<param name="ios-package" value="CDVBattery" />
+		<param name="wp-package" value="Battery" />
+		<param name="id" value="org.apache.cordova.battery-status" />
+	</feature>
+	<feature name="Camera">
+		<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+		<param name="ios-package" value="CDVCamera" />
+		<param name="wp-package" value="Camera" />
+		<param name="id" value="org.apache.cordova.camera" />
 	</feature>
 
 </widget>
